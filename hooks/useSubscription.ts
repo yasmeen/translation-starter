@@ -1,7 +1,8 @@
 'use client';
 
-import { useSupabase } from '@/app/supabase-provider';
 import { useEffect, useState } from 'react';
+
+import { useSupabase } from '@/app/supabase-provider';
 
 export const useSubscription = () => {
   const { supabase } = useSupabase();

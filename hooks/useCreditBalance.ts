@@ -1,8 +1,9 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+
 import { useSupabase } from '@/app/supabase-provider';
 import { SubscriptionWithProduct } from '@/types/db';
-import { useState, useEffect } from 'react';
 
 interface CreditBalance {
   balance: number;
@@ -64,7 +65,7 @@ export const useCreditBalance = (
     };
 
     calculateBalance();
-  }, [supabase]);
+  }, [subscription, supabase]);
 
   return { creditBalance, loading, error };
 };

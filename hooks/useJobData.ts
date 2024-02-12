@@ -1,8 +1,9 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 import { useSupabase } from '@/app/supabase-provider';
 import { Job } from '@/types/db';
-import { useEffect, useState } from 'react';
 
 interface UseJobDataOutput {
   jobs: Job[];
